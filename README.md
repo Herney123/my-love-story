@@ -1,2 +1,2 @@
 # my-love-story
-执子之手与子偕老
+<h1 align="center">执子之手与子偕老 ✨</h1>
