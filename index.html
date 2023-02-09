@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>记录在一起的天数</title>
+  <title>&#10084;柴鸡不菜&#10084;</title>
   <style>
     body {
       background-image: url("images/0.nm-p-1080.png");
@@ -15,38 +15,57 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
     }
     .title {
       font-size: 40px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       color: #fff;
       text-shadow: 1px 1px 2px #333;
       margin-bottom: 50px;
     }
     .countdown {
       font-size: 60px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       color: #fff;
       text-shadow: 1px 1px 2px #333;
       margin-bottom: 50px;
+      transform: translateY(100%);
+      opacity: 0;
+      animation: slideIn 1s ease forwards 1s;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes slideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
 <div class="container">
-  <div class="title">记录在一起的天数</div>
+  <div class="title">在一起 &#10084;</div>
   <div class="countdown" id="countdown"></div>
 </div>
 <script>
   const countdownEl = document.getElementById("countdown");
-  const endDate = new Date("2023-02-10T00:00:00");
+  const startDate = new Date("2020-10-13T00:31:00");
   setInterval(() => {
     const now = new Date();
-    const diff = endDate - now;
+    const diff = now - startDate;
     const days = Math.floor(diff / 1000 / 60 / 60 / 24);
     const hours = Math.floor(diff / 1000 / 60 / 60) % 24;
     const minutes = Math.floor(diff / 1000 / 60) % 60;
     const seconds = Math.floor(diff / 1000) % 60;
-    countdownEl.innerHTML = `${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
+    countdownEl.innerHTML = `一起走过 ${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
   }, 1000);
 </script>
 </body>
 </html>
+
