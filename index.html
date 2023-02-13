@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>&#10084;柴鸡不菜&#10084;</title>
+  <title>柴鸡不菜</title>
+  <link rel="shortcut icon" href="images/love_heart.ico">
   <style>
     body {
       background-image: url("images/0.nm-p-1080.png");
@@ -50,11 +51,13 @@
 </head>
 <body>
 <div class="container">
-  <div class="title">贡旺 &#10084; 蔡蕊</div>
+  <div class="title">贡旺 <img src="images/hearts_love.png" alt=""> 蔡蕊</div>
   <div class="countdown" id="countdown"></div>
+  <div class="start_btn" id="start_btn"></div>
 </div>
 <script>
   const countdownEl = document.getElementById("countdown");
+  const start_btn = document.getElementById("start_btn");
   const startDate = new Date("2020-10-13T00:31:00");
   setInterval(() => {
     const now = new Date();
@@ -64,7 +67,9 @@
     const minutes = Math.floor(diff / 1000 / 60) % 60;
     const seconds = Math.floor(diff / 1000) % 60;
     countdownEl.innerHTML = `一起走过 ${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
-  }, 1000);
+    // 开始按钮
+    start_btn.innerHTML = `<a href="/first" style="text-decoration: none; color: #fff; font-size: 20px;">开始</a>`;
+  }, 1500);
 </script>
 </body>
 </html>
