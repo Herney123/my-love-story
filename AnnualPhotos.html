@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年度相册</title>
+  <link href="js/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/jquery/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="js/bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <style>
+    .album-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .album {
+      margin: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      width: 150px;
+    }
+    .album img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="album-container">
+    <div class="album">
+      <a href="https://pictures-1257239071.cos.ap-nanjing.myqcloud.com/gw/love.png" data-lightbox="album" data-title="2022 年合影">
+        <img src="https://pictures-1257239071.cos.ap-nanjing.myqcloud.com/gw/love.png" alt="2022 年合影">
+      </a>
+      <p>2022</p>
+    </div>
+    <div class="album">
+      <a href="https://pictures-1257239071.cos.ap-nanjing.myqcloud.com/gw/love.png" data-lightbox="album" data-title="2021 年合影">
+        <img src="https://pictures-1257239071.cos.ap-nanjing.myqcloud.com/gw/love.png" alt="2021 年合影">
+      </a>
+      <p>2021</p>
+    </div>
+    <!-- 以此类推，为每年的照片添加一个.album div -->
+  </div>
+</div>
+</body>
+</html>
